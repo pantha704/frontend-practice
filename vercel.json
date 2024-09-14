@@ -2,13 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "qr-code-component-main/index.html",
+      "src": "qr-code-component-main/**/*.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/qr-code",
       "dest": "/qr-code-component-main/index.html"
     }
   ]
