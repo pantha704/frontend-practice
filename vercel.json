@@ -10,6 +10,15 @@
     {
       "src": "/qr-code",
       "dest": "/qr-code-component-main/index.html"
+    },
+    {
+      "src": "/qr-code/question",
+      "dest": "/qr-code-component-main/question.html"
+    },
+    {
+      "src": "/qr-code/solution",
+      "dest": "/qr-code-component-main/solution.html"
     }
+    // Add more routes for additional projects here
   ]
 }
