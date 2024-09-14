@@ -19,6 +19,5 @@
       "src": "/qr-code/solution",
       "dest": "/qr-code-component-main/solution.html"
     }
-    // Add more routes for additional projects here
   ]
 }
