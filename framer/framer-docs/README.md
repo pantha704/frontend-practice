@@ -1,6 +1,9 @@
 # Framer Motion Documentation
 
-Framer Motion is a powerful animation library for React, enabling developers to create complex animations with ease. This guide covers the most useful and professionally utilized attributes of Framer Motion, explaining their functions, correct application, and their effects on components.
+Framer Motion is a powerful animation library for React, enabling developers to create
+complex animations with ease. This guide covers the most useful and professionally
+utilized attributes of Framer Motion, explaining their functions, correct application,
+and their effects on components.
 
 ## Table of Contents
 
@@ -81,6 +84,37 @@ Sets the animation state while the component is being dragged.
 ```jsx
 <motion.div drag whileDrag={{ scale: 1.2, rotate: 10 }} />
 ```
+
+### `useAnimation`
+
+The `useAnimation` hook allows for programmatic control of animations by providing an animation controller that can start, stop, or sequence animations.
+
+#### Usage
+
+```jsx
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+
+const Example = () => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({
+      x: 100,
+      opacity: 1,
+      transition: { duration: 2 },
+    });
+  }, [controls]);
+
+  return <motion.div initial={{ opacity: 0 }} animate={controls} />;
+};
+```
+
+#### Use Cases
+
+- **Triggering Animations on Events:** Start animations in response to user interactions or external events.
+- **Sequencing Animations:** Control multiple animations in a specific order.
+- **Conditional Animations:** Animate components based on state changes or other conditions.
 
 ---
 
